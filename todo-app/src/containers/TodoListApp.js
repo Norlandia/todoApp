@@ -31,14 +31,15 @@ class TodoList extends Component {
     console.log(this.state.items);
     return (
       <div className="todoListMain">
-        <h1>Todos</h1>
+        <h1 className="title">Todos</h1>
         <form onSubmit={this.onSubmit}>
           <input
+            className="input-field"
             placeholder="Task"
             value={this.state.text}
             onChange={this.handleChange}
           />
-          <button type="submit">Add</button>
+          <button className="add-button btn" type="submit">Add</button>
         </form>
         <List listItems={this.state.items} delete={this.handleDelete} />
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoList from '../containers/TodoListApp';
+import '../styles/styles.css';
 
 const App = () => {
   return (

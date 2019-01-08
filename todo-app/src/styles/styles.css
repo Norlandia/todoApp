@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(
+    to top,
+    #9bd8ed,
+    #74c2e6,
+    #50abe0,
+    #3093d8,
+    #1f7ace
+  );
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-align: center;
+  font-size: 70px;
+}
+
+.input-field {
+  margin: 5px 0 5px 5px;
+  border: none;
+  height: 47px;
+  width: 420px;
+  border-radius: 10px 0 0 10px;
+  padding: 0 0 0 13px;
+  font-size: 22px;
+  vertical-align: middle;
+}
+
+.add-button {
+  height: 47px;
+  width: 63px;
+  border: none;
+  margin: 5px 5px 5px 0;
+  padding: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: #33cfc0;
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+  vertical-align: middle;
+}
+
+ul {
+  padding: 0;
+}
+
+.list-item {
+  list-style: none;
+  padding-left: 5px;
+  margin: 20px 0;
+  display: flex;
+}
+
+form {
+  margin-bottom: 80px;
+}
+
+.todo-text {
+  color: white;
+  font-size: 22px;
+  display: inline-block;
+  width: 420px;
+}
+
+.delete {
+  align-self: flex-end;
+  background-color: tomato;
+  color: white;
+  width: 80px;
+  height: 47px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
