@@ -21,6 +21,12 @@ class TodoList extends Component {
     });
   };
 
+  handleDelete = (index) => {
+    this.setState({
+      items: this.state.items.filter((item, i) => i !== index),
+    });
+  };
+
   render() {
     console.log(this.state.items);
     return (
@@ -33,7 +39,7 @@ class TodoList extends Component {
           />
           <button type="submit">Add</button>
         </form>
-        <List listItem={this.state.items}/>
+        <List listItems={this.state.items} delete={this.handleDelete} />
       </div>
     );
   }
