@@ -31,6 +31,7 @@ class TodoList extends Component {
     console.log(this.state.items);
     return (
       <div className="todoListMain">
+        <h1>Todos</h1>
         <form onSubmit={this.onSubmit}>
           <input
             placeholder="Task"
