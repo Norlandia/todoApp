@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import List from '../components/List';
+import List from '../components/ListItem';
 
 class TodoList extends Component {
   state = {
