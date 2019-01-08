@@ -6,7 +6,7 @@ class TodoList extends Component {
       <div className="todoListMain">
         <div className="header">
           <form onSubmit={this.props.addItem}>
-            <input placeholder="Task" />
+            <input placeholder="Task" onChange={this.props.handleInput}/>
             <button type="submit">Add</button>
           </form>
         </div>
