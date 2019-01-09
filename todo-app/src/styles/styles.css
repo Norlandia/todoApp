@@ -78,6 +78,7 @@ form {
   font-size: 22px;
   display: inline-block;
   width: 420px;
+  cursor: pointer;
 }
 
 .delete {
@@ -96,5 +97,5 @@ form {
 
 .done {
   text-decoration: line-through;
-  color: #9592A2;
+  color: #6998CA;
 }
