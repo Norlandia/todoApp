@@ -39,6 +39,10 @@ body {
   box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 );
 }
 
+*:focus {
+  outline: none; 
+}
+
 .add-button {
   height: 47px;
   width: 63px;
