@@ -93,3 +93,8 @@ form {
   align-self: center;
   box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 );
 }
+
+.done {
+  text-decoration: line-through;
+  color: #9592A2;
+}

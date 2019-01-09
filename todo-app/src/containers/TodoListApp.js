@@ -51,7 +51,6 @@ class TodoList extends Component {
   };
 
   render() {
-    console.log(this.state.items);
     return (
       <div className="todoListMain">
         <h1 className="title">Todos</h1>
