@@ -3,22 +3,31 @@ import List from '../components/TodoList';
 
 class TodoList extends Component {
   state = {
-    text: '',
+    newTodo: {
+      text: '',
+      isDone: false,
+    },
     items: [],
   };
 
   handleChange = (e) => {
     this.setState({
-      text: e.target.value,
+      newTodo: {
+        text: e.target.value,
+        isDone: false,
+      },
     });
   };
 
   onSubmit = (e) => {
     e.preventDefault();
-    if (this.state.text !== '') {
+    if (this.state.newTodo.text !== '') {
       this.setState({
-        text: '',
-        items: [...this.state.items, this.state.text],
+        newTodo: {
+          text: '',
+          isDone: false,
+        },
+        items: [...this.state.items, this.state.newTodo],
       });
     }
   };
@@ -26,6 +35,18 @@ class TodoList extends Component {
   handleDelete = (index) => {
     this.setState({
       items: this.state.items.filter((item, i) => i !== index),
+    });
+  };
+
+  handleDone = (index) => {
+    const changedItem = {
+      text: this.state.items[index].text,
+      isDone: !this.state.items[index].isDone,
+    };
+    this.setState({
+      items: this.state.items.map((item, i) =>
+        i === index ? changedItem : item
+      ),
     });
   };
 
@@ -38,14 +59,19 @@ class TodoList extends Component {
           <input
             className="input-field"
             placeholder="Task"
-            value={this.state.text}
+            value={this.state.newTodo.text}
             onChange={this.handleChange}
+            autoFocus
           />
           <button className="add-button btn" type="submit">
             Add
           </button>
         </form>
-        <List listItems={this.state.items} delete={this.handleDelete} />
+        <List
+          listItems={this.state.items}
+          delete={this.handleDelete}
+          markDone={this.handleDone}
+        />
       </div>
     );
   }
