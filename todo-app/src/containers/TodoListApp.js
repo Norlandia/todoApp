@@ -15,10 +15,12 @@ class TodoList extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.setState({
-      text: '',
-      items: [...this.state.items, this.state.text],
-    });
+    if (this.state.text !== '') {
+      this.setState({
+        text: '',
+        items: [...this.state.items, this.state.text],
+      });
+    }
   };
 
   handleDelete = (index) => {
@@ -39,7 +41,9 @@ class TodoList extends Component {
             value={this.state.text}
             onChange={this.handleChange}
           />
-          <button className="add-button btn" type="submit">Add</button>
+          <button className="add-button btn" type="submit">
+            Add
+          </button>
         </form>
         <List listItems={this.state.items} delete={this.handleDelete} />
       </div>
