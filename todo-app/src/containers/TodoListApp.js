@@ -21,6 +21,8 @@ class TodoList extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+    console.log(e.target[0].value);
+
     if (this.state.newTodo.text !== '') {
       this.setState({
         newTodo: {
@@ -54,7 +56,7 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <h1 className="title">Todos</h1>
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit} >
           <input
             className="input-field"
             placeholder="Task"
